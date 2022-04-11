@@ -1,0 +1,1444 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0pt;
+    font-family:'Fredoka', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --primary-color:#b0b0af;
+    --red-color:#D68B76;
+    --green-color:#89B1AB;
+    --yellow-color:#F5D767;
+}
+/* Header styles */
+
+.headerTopContainer{
+    background-color:white;
+    height: 55px;
+    padding-right: 7.5vw;
+    padding-left: 7.5vw;
+    display: flex;
+    align-items: center;
+} 
+header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+.socialMediaIcon{
+    width: 30px;
+    height: 30px;
+}
+.headerTitle{
+    color: var(--primary-color);
+    font-size: 2.1rem;
+    text-align: right;
+}
+.headerMainContainer{
+    background-color: var(--primary-color);
+    height: 275px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.headerLogo{
+    display: flex;
+    justify-content: center;
+}
+.headerLogo img{
+    height: 218px;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-duration: 80s;
+}
+@keyframes rotation{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+.headerBottomContainer{
+    background-color: var(--primary-color);
+    height: 6vw;
+}
+.headerBottomContainer .navbar-nav{
+    width: 100%;
+    font-size: 2.4rem;
+    display: inline-flex;
+    list-style: none; 
+    text-decoration: none;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+    justify-content: space-between;
+}
+.headerBottomContainer .navbar-nav .nav-item a{
+    color: white;
+}
+.dropdown-menu{
+    background-color: var(--primary-color);
+    font-size: 2.4rem;
+}
+header .mobileMenu{
+    display: none;
+}
+@media only screen and (max-width:980px){
+    .headerBottomContainer{
+        display: none;
+    }
+    header .mobileMenu{
+        display: flex;
+        height: 55px;
+        font-size: 2.4rem;
+        color: var(--primary-color);
+    }
+    header .mobileMenu .offcanvas-title{
+        font-size: 2.4rem; 
+        color: var(--primary-color); 
+    }
+    header .mobileMenu .offcanvas-body .dropdown-menu .dropdown-item a{
+        color: white;
+    }
+    .fixed-top{
+        position:initial;
+    }
+    .headerMainContainer{
+        height: 180px;
+    }
+    .headerLogo img{
+        height: 150px;
+    }
+}
+@media only screen and (max-width:600px){
+    .headerTitle{
+        font-size: 2rem;
+    }
+    .socialMediaIcon{
+        width: 25px;
+        display: flex;
+        align-items: center;
+    }
+    .socialMediaIcon img{
+        width: 100%;
+    }
+    .headerMainContainer{
+        height: 137px;
+    }
+    .headerLogo img{
+        height: 100px;
+    }
+}
+@media only screen and (max-width:450px){
+    .headerTitle{
+        font-size: 1.6rem;
+    }
+    .socialMediaIcon{
+        width: 20px;
+        display: flex;
+        align-items: center;
+    }
+}
+@media only screen and (max-width:390px){
+    .socialMediaIcon{
+        width: 16px;
+        display: flex;
+        align-items: center;
+    }
+}
+/* Main styles */
+.mainPage{
+    background-color: var(--primary-color);
+    padding-right: 0;
+    padding-left: 0;
+}
+.mainVideo video{
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+    padding-right: 0;
+    padding-left: 0;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutTitle{
+    color: white;
+    font-size: 4.8rem;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    text-align: center;
+    width: 80vw; 
+}
+.aboutText {
+    color: white;
+    font-size: 3.6rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    text-align: center;
+    width: 80vw;   
+}
+.aboutText p{
+    padding-top: 2.2vw;
+}
+.mainImages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainImages .image {
+    width: 85vw;
+    position: relative;
+    display: inline-block;   
+}
+.mainImages .image img{
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 1vw;
+}
+.mainImages p.ImageText{
+    position: absolute;
+    bottom: 3vw;
+    right: 1.5vw;
+    color: var(--primary-color);
+    font-size: 5rem;
+}
+@media only screen and (max-width:1230px){
+    .mainImages p.ImageText{
+        font-size: 3.5rem;
+    }  
+}
+@media only screen and (max-width:850px){
+    .mainImages p.ImageText{
+        font-size: 2.5rem;
+    }    
+}
+@media only screen and (max-width:600px){
+    .aboutTitle{
+        font-size: 4rem;
+    } 
+    .aboutText {
+        font-size: 2.5rem; 
+    }
+    .mainImages p.ImageText{
+        font-size: 1.8rem;
+    }     
+}
+@media only screen and (max-width:450px){
+    .aboutTitle{
+        font-size: 2rem;
+    } 
+    .aboutText {
+        font-size: 1.6rem; 
+    }
+    .mainImages p.ImageText{
+        font-size: 1.6rem;
+    }  
+}
+/* Mailing List */
+
+.mailingList{
+    width: 100vw;
+    height: 30vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vw;
+}
+.mailingListContent{
+    width: 68vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+.mailingList h3{
+    color: var(--primary-color);
+    font-size: 4rem;
+    text-align: center;
+}
+.mailingList p{
+    color: var(--primary-color);
+    font-size: 2.4rem;
+    text-align: center;
+    margin-top: 2vw;
+}
+.mailingList .form{
+    display: flex;
+    align-items: center;
+    padding: 1.5vw;
+    color: white;
+    justify-content: center;
+    margin-top: 2vw;
+}
+.mailingList .form ::placeholder{
+    color: white;
+    font-size: 1.8rem;
+}
+.nameForm input{
+    background-color:var(--red-color);
+    border: none;
+    width: 26vw;
+    height: 4vw;
+    display: block;
+    margin-right: 2vw;
+    padding: 1vw;
+}
+.emailForm input{
+    background-color:var(--yellow-color);
+    border: none;
+    width: 26vw;
+    height: 4vw;
+    display: block;
+    margin-right: 2vw;
+    padding: 1vw;
+}
+.submitButton input {
+    background-color: var(--green-color);
+    border: none;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    display: block;
+    color: white;
+    font-size: 1.8rem;
+}
+.mailingListVideo{
+    display: flex;
+    width: 25vw;
+    height: 25vw;
+    margin-right: 6vw;
+    align-items: center;
+}
+.mailingListVideo video{
+   width: 100%;
+}
+@media only screen and (max-width:850px){
+    .mailingList h3{
+        font-size: 2.8rem;
+    }
+    .mailingList p{
+        font-size: 1.8rem;
+    }
+    .mailingList .form ::placeholder{
+        font-size: 1.6rem;
+    }
+    .submitButton input{
+        font-size: 1.6rem;
+        width: 6vw;
+        height: 6vw;
+    }
+}
+@media only screen and (max-width:600px){
+    .mailingList{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4vw;
+        padding-top: 2vw;
+    }
+    .mailingListContent{
+        width: 80vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .mailingList h3{
+        font-size: 3.2rem;
+    }
+    .mailingList p{
+        font-size: 2.1rem;
+        margin-top: 2vw;
+    }
+    .mailingList .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        justify-content: center;
+        margin-top: 2vw;
+    }
+    .mailingList .form ::placeholder{
+        font-size: 2rem;
+    }
+    .nameForm input, .emailForm input{
+        width: 70vw;
+        height: 10vw;
+        margin-right: 0;
+        padding: 0.5vw;
+        margin-top: 3vw;
+    }
+    .submitButton input {
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+        font-size: 2.4rem;
+        margin-top: 3vw;
+    }
+    .mailingListVideo {
+        width: 85vw;
+        height: 85vw;
+        margin-top: 4vw;
+        margin-bottom: 7.5vw;
+        margin-right: 0;
+        margin-left: 0;  
+    }
+    .mailingListVideo video{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width:450px){
+    .mailingList{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4vw;
+        padding-top: 2vw;
+    }
+    .mailingListContent{
+        width: 80vw;
+        margin-left: 0;
+    }
+    .mailingList h3{
+        font-size: 2.4rem;
+    }
+    .mailingList p{
+        font-size: 1.8rem;
+        margin-top: 2vw;
+    }
+    .mailingList .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.75vw;
+        justify-content: center;
+        margin-top: 2vw;
+    }
+    .mailingList .form ::placeholder{
+        font-size: 1.8rem;
+    }
+    .nameForm input, .emailForm input{
+        width: 70vw;
+        height: 10vw;
+        display: block;
+        margin-right: 0;
+        padding: 0.5vw;
+        margin-top: 3vw;
+    }
+    .submitButton input {
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        font-size: 2.4rem;
+        margin-top: 3vw;
+    }
+    .mailingListVideo {
+        width: 85vw;
+        height: 85vw; 
+    }
+    .mailingListVideo video{
+        width: 100%;
+    }
+}
+/* Footer style */
+.mainFooter{
+    background-color: var(--primary-color);
+    padding: 0ch;
+    padding-right: 0;
+    padding-left: 0
+}
+.topFooter{
+    margin: 0%;
+    width: auto;
+    height: 18vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 2vw;
+}
+.info{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.info h4, .terms h4{
+    font-size: 2rem;
+}
+.info ul, .terms ul{
+    display: inline-flex;
+    font-size: 1.6rem;
+    list-style: none;
+    padding: 1.5vw;
+}
+.info a, .terms a{
+    color: white;
+    text-decoration: none;
+}
+.info a:hover, .terms a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.info li, .terms li{
+    padding: 2px;
+    text-align: justify;
+}
+.footerLogo{
+    width: 12vw;
+}
+.footerLogo img{
+    width: 100%;
+}
+.terms{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.bottomFooter{
+    width: auto;
+    height: 9vw;
+    background-color: var(--primary-color);
+    padding-right: 0;
+    padding-left: 0;
+}
+.bottomFooter p{
+    width: auto;
+    color: var(--primary-color);
+    background-color: white;
+    font-size: 2.4rem;
+    padding: 2vw;
+    margin-bottom: 3px;
+    padding-right: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+@media only screen and (max-width:850px){
+    
+    .footerLogo {
+        width: 100px;
+        margin-bottom: 4vw;
+    }
+    .footerLogo img{
+        width: 100%;
+    }
+    .bottomFooter{
+        width: 100vw;
+        height: 13vw;
+    }
+    .bottomFooter p{
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (max-width:735px){
+    .topFooter{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .footerLogo {
+        margin-bottom: 4vw;
+        width: 100px;
+    }
+    .footerLogo img{
+        width: 100%;
+    }
+    .bottomFooter{
+        width: 100vw;
+        height: 13vw;
+    }
+    .bottomFooter p{
+        font-size: 1.6rem;
+    }
+}
+/* Blog page styles */
+.mainBlog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainBlogContent{
+    background-color: var(--primary-color);
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchBar { 
+    width: 60vw;
+    height: 6vw;
+    border-radius: 0ch;
+    border: none;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vw;
+}
+.mainBlogContent .btn-secondary{
+    background-color:var(--green-color) ;  
+}
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+.blogPost{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4vw;
+}
+.postTitle{
+    display: flex;
+    align-items: center;
+    font-size: 2.8rem;
+    margin-bottom: 2vw;  
+}
+.postDate{
+    color: white;
+}
+.postTitle img{
+    margin-right: 1vw;
+    margin-left: 2vw;
+    height: 3vw;
+}
+.postTitleText{
+    color: var(--yellow-color);
+}
+.blogPostImage{
+    width: 85vw;
+}
+.blogPostImage img{
+    width: 100%;
+}
+.nextPages{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3vw;
+}
+.nextPages img{
+    width: 80px;
+    margin:10px;
+}
+.blogComments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4vw;
+} 
+.blogComments h3{
+    color: white;
+    font-size: 4.8rem;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+}
+.commentsForm{
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+.commentsFormLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.commentsNameForm{
+    width: auto;
+    align-items: center;
+}
+.commentsNameForm input{
+    background-color:var(--red-color);
+    border: none;
+    width: 25vw;
+    height: 2.5vw;
+    display: block;
+    margin-bottom: 2vw;
+    align-items: center;
+}
+.commentsNameForm ::placeholder{
+    color: white;
+    font-size: 1.6rem;
+    padding-left: 1vw;
+}
+.commentsEmailForm{
+    width: auto;
+}
+.commentsEmailForm input{
+    background-color:var(--yellow-color);
+    border: none;
+    width: 25vw;
+    height: 2.5vw;
+    display: block;
+    margin-bottom: 2vw;
+}
+.commentsEmailForm ::placeholder{
+    color: white;
+    font-size: 1.6rem;
+    padding-left: 1vw;
+}
+.commentsSubmitButton input {
+    background-color: var(--green-color);
+    border: none;
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.6rem;
+}
+.commentsMessage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.commentsMessage input{
+    background-color: white;
+    width: 22vw;
+    height: 14vw;
+    border: none;
+    margin-left: 2vw;
+}
+.commentsMessage ::placeholder{
+    color:var(--primary-color);
+    font-size: 1.6rem;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+}
+@media only screen and (max-width:850px){
+    .postTitle{
+        display: flex;
+        font-size: 2rem;
+        margin-bottom: 2vw;  
+    }
+    .blogComments h2{
+        font-size: 2.5rem;
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+    }
+    .commentsFormLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+    }
+    .commentsNameForm{
+        width: 50vw;
+    }
+    .commentsNameForm input{
+        width: 50vw;
+        height: 8vw;
+        display: block;
+        margin-bottom: 2vw;
+    }
+    .commentsNameForm ::placeholder{
+        font-size: 1.6rem;
+        padding-left: 1vw;
+    }
+    .commentsEmailForm{
+        width: 50vw;
+    }
+    .commentsEmailForm input{
+        width: 50vw;
+        height: 8vw;
+        display: block;
+        margin-bottom: 2vw;
+    }
+    .commentsEmailForm ::placeholder{
+        font-size: 1.6rem;
+        padding-left: 1vw;
+    }
+    .commentsSubmitButton input {
+        width: 12vw;
+        height: 12vw;
+        border-radius: 50%;
+        font-size: 1.6rem;
+    }
+    .commentsMessage input{
+        width: 90vw;
+        height: 30vw;
+        margin-left: 0;
+        margin-top: 3vw;
+    }
+    .commentsMessage ::placeholder{
+        font-size: 1.6rem;
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+    }
+}
+@media only screen and (max-width:600px){
+    .postTitle{
+        font-size: 1.6rem;
+    }
+    .nextPages{
+        display: flex;
+        align-items: center;
+        width: 80vw;
+        margin-right: 0;
+        margin-left: 0ch;
+    }
+    .nextPages img{
+        width: 60px;
+    }
+    .blogComments h3{
+        font-size: 2.5rem;
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+    }   
+}
+@media only screen and (max-width:460px){
+    .searchBar {
+        font-size: 1.6rem;
+    }
+    .nextPages img{
+        width: 45px;
+    }
+    .dropdown-menu .dropdown-item {
+        color: white;
+        font-size: 1.8rem;
+    }
+    .postTitle{
+        font-size: 1.6rem;
+    }
+}
+/* Shop page style */
+
+.mainShopPage{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainShopHeader{
+    width: 100vw;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 7.5vw;
+    justify-content: center;
+    padding-bottom: 3vw;
+    margin-bottom: 2vw; 
+}
+.mainShopHeader h2{
+    color: var(--primary-color);
+    font-size: 4rem;
+    margin-bottom: 1vw;
+} 
+.mainShopHeaderBrowser{
+    width: 35vw;
+    height: 3vw;
+    color: white;
+    font-size: 1.8rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.btn-secondary{
+    background-color: var(--primary-color);
+    border: none;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+}
+.cartIcon, .moreInfoIcon {
+    width: 4vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+.card-body .card-title, .card-text{
+    font-size: 2.1rem;
+    color: var(--primary-color);
+}
+.card{
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+}
+@media only screen and (max-width:850px){
+    .mainShopHeaderBrowser{
+        height: 4.5vw;
+        color: white;
+    }
+    .cartIcon, .moreInfoIcon {
+        width: 5vw;
+    }
+}
+@media only screen and (max-width:766px){
+    .mainShopHeader h2{
+        font-size: 3rem;
+    }
+    .cartIcon, .moreInfoIcon {
+        width: 7vw;
+    }
+}
+@media only screen and (max-width:450px){
+    .mainShopHeader{
+        width: 100vw;
+        height: 36vw;
+        padding-left: 0;
+        align-content: center;
+    }
+    .mainShopHeader h2{
+        display: flex;
+        justify-content: center;
+        color: var(--primary-color);
+        font-size: 3rem;
+        margin-bottom: 1vw;
+        padding: 1vw;
+    } 
+    .mainShopHeaderBrowser{
+        width: 70vw;
+        height: 8vw;
+        padding: 1vw;
+    }
+    .mainShopHeader .dropdown{
+        display: flex;
+        justify-content: center;
+    }
+}
+/* Contact page style */
+
+.mainContact{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.mainContactImageMobile{
+    display: none;
+}
+.mainContactImage{
+    width: 100vw;
+    position: relative;
+    display: inline-block;
+}
+.mainContact img{
+    width: 100%;
+}
+.mainContactContent{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-right: 7.5vw;
+    align-items: flex-end;
+}
+.mainContactContent h3{
+    color: var(--primary-color);
+    font-size: 4.8rem;
+    margin-bottom: 2vw;
+}
+.mainContactContent p{
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+.infoMail{
+    color:var(--red-color)
+}
+.faqsLink a{
+    color: var(--green-color);
+    text-decoration: none;
+}
+.contactForm{
+    display: flex;
+    justify-content: flex-end;
+}
+.contactFormLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18vw;
+}
+.contactNameForm{
+    width: 18vw;
+}
+.contactNameForm input{
+    background-color:var(--red-color);
+    border: none;
+    width: 18vw;
+    height: 2.5vw;
+    display: block;
+    margin-bottom: 2vw;
+}
+.contactNameForm ::placeholder{
+    color: white;
+    font-size: 1.6rem;
+    padding-left: 1vw;
+}
+.contactEmailForm{
+    width: 18vw;
+}
+.contactEmailForm input{
+    background-color:var(--yellow-color);
+    border: none;
+    width: 18vw;
+    height: 2.5vw;
+    display: block;
+    margin-bottom: 2vw;
+}
+.contactEmailForm ::placeholder{
+    color: white;
+    font-size: 1.6rem;
+    padding-left: 1vw;
+}
+.contactSubmitButton input {
+    background-color: var(--green-color);
+    border: none;
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.6rem;
+}
+.contactMessage{
+    display: flex;
+}
+.contactMessage input{
+    background-color: white;
+    width: 20vw;
+    height: 14vw;
+    border: none;
+    margin-left: 2vw;
+}
+.contactMessage ::placeholder{
+    color:var(--primary-color);
+    font-size: 1.6rem;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+}
+@media only screen and (max-width:1230px){
+    .mainContactContent h3{
+        font-size: 3rem;
+        margin-bottom: 1vw;
+    }
+    .mainContactContent{
+        margin-right: 7.5vw;
+    }
+    .contactForm{
+        display: grid;
+        grid-template-columns: 25vw 25vw;
+        justify-content: center;
+        margin-right: 3vw;
+    }
+    .contactFormLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25vw;
+    }
+    .contactNameForm{
+        width: 25vw;
+    }
+    .contactNameForm input{
+        width: 25vw;
+        height: 3vw;
+    }
+    .contactEmailForm{
+        width: 25vw;
+    }
+    .contactEmailForm input{
+        width: 25vw;
+        height: 3vw;
+    }
+    .contactMessage{
+        display: flex;
+        width: 25vw;
+    }
+    .contactMessage input{
+        width: 25vw;
+        height: 15vw;
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width:850px){
+    .mainContact{
+        width: 100vw;
+        display: flex;
+        flex-direction: column; 
+    }
+    .mainContactImage{
+        display: none;
+    }
+    .mainContactImageMobile{
+        display: block;
+        padding-right: 5vw;
+        padding-left: 5vw;
+        width: 100vw;
+    }
+    .mainContactImageMobile img{
+        width: 100%;
+    }
+    .mainContactContent{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: 5vw;
+        padding-left: 5vw;
+    }
+    .mainContactContent h3{
+        font-size: 4rem;
+        margin: 0px;
+        color: white;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+    .mainContactContent p{
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .contactForm{
+        width: 60vw;
+        margin-right: 0;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+    .contactFormLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60vw;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .contactNameForm{
+        width: 60vw;
+    }
+    .contactNameForm input{
+        width: 60vw;
+        height: 8vw;
+        display: block;
+        margin-bottom: 2vw;
+    }
+    .contactNameForm ::placeholder{
+        font-size: 2rem;
+        padding-left: 1vw;
+    }
+    .contactEmailForm{
+        width: 60vw;
+    }
+    .contactEmailForm input{
+        width: 60vw;
+        height: 8vw;
+        display: block;
+        margin-bottom: 2vw;
+    }
+    .contactEmailForm ::placeholder{
+        font-size: 2rem;
+        padding-left: 1vw;
+    }
+    .contactSubmitButton input {
+        width: 12vw;
+        height: 12vw;
+        border-radius: 50%;
+        font-size:2rem;
+    }
+    .contactMessage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 2vw;
+        width: 60vw;
+        height: 30vw;
+    }
+    .contactMessage input{
+        width: 60vw;
+        height: 30vw;
+    }
+    .contactMessage ::placeholder{
+        font-size: 2rem;
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+    }
+}
+@media only screen and (max-width:450px){
+    .contactSubmitButton input {
+        width: 15vw;
+        height: 15vw;
+        font-size: 1.6rem;
+    }
+    .contactNameForm ::placeholder, .contactEmailForm ::placeholder{
+        font-size: 1.6rem;
+    }
+}
+/* Faqs page style */
+
+.mainFaqsContent{
+    background-color: var(--primary-color); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 7.5vw; 
+    padding-left: 7.5vw;
+}
+.mainFaqsContent h2{
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 3vw;
+}
+.mainFaq{
+    margin-bottom: 5vw;
+}
+.mainFaqImage{
+    width: 40vw;
+}
+.mainFaqImage img{
+    width: 100%;
+}
+.mainFaqText{
+    padding: 2vw;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainFaqText h3{
+    font-size: 2.4rem;
+    color: var(--yellow-color);
+    margin-bottom: 2vw;
+}
+.mainFaqText p{
+    font-size: 2.1rem;
+    color: white;
+}
+@media only screen and (max-width:1230px){
+    .mainFaqText h3{
+        font-size: 2rem;
+    }
+    .mainFaqText p{
+        font-size: 1.6rem;
+    } 
+ }
+@media only screen and (max-width:850px){
+    .mainFaq{
+        margin-bottom: 5vw;
+    }
+    .mainFaqImage{
+        width: 100vw;
+        padding-left: 7.5vw;
+        padding-right: 7.5vw;
+    }
+    .mainFaqText{
+        padding-right: 7.5vw;
+        padding-left: 7.5vw;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+} 
+@media only screen and (max-width:450px){
+    .mainFaqsContent h2{
+        font-size: 3rem;
+    }
+} 
+/* Our Story page styles */
+.mainOurStory{
+    background-color: var(--primary-color);
+    width: 100vw;
+    position: relative;
+    display: inline-block;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+.mainOurStory img{
+    width: 100%;
+}
+.OurStoryMobileImage{
+    display: none;
+}
+.mainOurStory h2{
+    width: 30vw;
+    font-size: 6rem;
+    color: var(--primary-color);
+    position: absolute;
+    top: 3vw;
+    left: 3vw;
+}
+.mainOurStory h2 span{
+    color: var(--red-color);
+}
+.mainOurStory h3{
+    width: 25vw;
+    font-size: 3.6rem;
+    color: var(--yellow-color);
+    position: absolute;
+    bottom: 3vw;
+    left: 3vw;
+}
+.mainOurStoryText{
+    padding-right: 7.5vw;
+    padding-left: 7.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vw;
+    text-align: justify;
+}
+.welcome {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 2vw;
+    color: white;
+}
+.mainText{
+    padding-top: 2vw;
+    color: white;
+    font-size: 2.4rem;
+}
+@media only screen and (max-width:1230px){
+    .mainOurStory h2{
+        width: 30vw;
+        font-size: 4rem;
+    }
+    .mainOurStory h3{
+        width: 30vw;
+        font-size: 2.5rem;
+    }
+    .welcome {
+        font-size: 2.5rem;
+    }
+    .mainText{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width:850px){
+    .mainOurStory h2{
+        width: 50vw;
+        font-size: 3rem;
+    }
+    .mainOurStory h3{
+        width: 40vw;
+        font-size: 2rem;
+    }
+    .welcome {
+        font-size: 2rem;
+    }
+    .mainText{
+        font-size: 1.6rem;
+    }   
+}
+@media only screen and (max-width:450px){
+    .OurStoryMobileImage{
+        display: block;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    .OurStoryImage{
+        display: none;
+    }
+    .mainOurStory h2{
+        width: 50vw;
+        font-size: 2.1rem;
+        padding-left: 2vw;
+    }
+    .mainOurStory h3{
+        display: none;
+    }
+}
+/* Cart page style */
+.mainCartInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+}
+.mainCartInfo a{
+    color: white;
+}
+
+/* Payment page style */
+.mainPayments, .mainPrivacy, .mainReturns, .mainSaleTerms, .mainShipping, .mainUseTerms, .mainCart{
+    background-color: var(--primary-color);
+    padding-left: 0;
+    padding-right: 0;
+}
+.paymentsHeader, .privacyHeader, .returnsHeader, .saleTermsHeader, .shippingHeader, .useTermsHeader, .cartHeader{
+    width: 100vw;
+    height: 5vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.paymentsHeader h2, .privacyHeader h2, .returnsHeader h2, .saleTermsHeader, .shippingHeader h2, .useTermsHeader h2, .cartHeader h3{
+    color: var(--primary-color);
+    font-size: 4.8rem;
+}
+.mainPaymentsInfo, .mainPrivacyInfo, .mainReturnsInfo, .mainSaleTermsInfo, .mainShippingInfo, .useTermsInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+}
+.mainPaymentsInfo h3, .mainPrivacyInfo h3, .mainReturnsInfo h3, .mainSaleTermsInfo h3, .useTermsInfo h3{
+    color: var(--yellow-color);
+    font-size: 2.4rem;
+    margin-top: 4vw;
+}
+.mainPaymentsInfo p, .mainPrivacyInfo p, .mainReturnsInfo p, .mainSaleTermsInfo p, .mainShippingInfo p, .useTermsInfo p, .mainCartInfo p{
+    color: white;
+    font-size: 1.6rem;
+    margin-top: 2vw;
+    text-align: justify;
+}
+@media only screen and (max-width:1230px){
+.paymentsHeader, .privacyHeader, .returnsHeader, .saleTermsHeader, .shippingHeader, .useTermsHeader, .cartHeader{
+    height: auto;
+    padding-top: 1vw;
+    padding-bottom: 1vw;  
+}
+.paymentsHeader h2, .privacyHeader h2, .returnsHeader h2, .saleTermsHeader h2, .shippingHeader h2, .useTermsHeader h2, .cartHeader h2{
+    font-size: 4rem;
+}
+}
+@media only screen and (max-width:600px){
+    .mainPaymentsInfo h3, .mainPrivacyInfo h3, .mainReturnsInfo h3, .mainSaleTermsInfo h3, .useTermsInfo h3{
+        font-size: 2rem;
+
+    }
+}
